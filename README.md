@@ -15,12 +15,12 @@ This project demonstrates a complete workflow — from **data ingestion, preproc
 - **Prediction Box**: Try your own text and get real-time sentiment prediction.
 ---
 
-⚙️ Tech Stack
-Programming: Python (Pandas, Scikit-learn, Seaborn, Altair, Plotly)
-Database: MySQL (via SQLAlchemy)
-Visualization: Power BI, Matplotlib, Seaborn, Altair
-Web App: Streamlit
-Version Control: Git & GitHub
+# ⚙️ Tech Stack
+- Programming: Python (Pandas, Scikit-learn, Seaborn, Altair, Plotly)
+- Database: MySQL (via SQLAlchemy)
+- Visualization: Power BI, Matplotlib, Seaborn, Altair
+- Web App: Streamlit
+- Version Control: Git & GitHub
 
 🚀 Getting Started
 1️⃣ Clone the Repo
