@@ -24,7 +24,7 @@ This project demonstrates a complete workflow — from **data ingestion, preproc
 
 # 🚀 Getting Started
 # 1️⃣ Clone the Repo
-git clone https://github.com/GKTHIRUMARAN/Sentiment-and-Trend-Tracker.git  
+git clone https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER.git  
 cd trend-tracker
 
 # 2️⃣ Setup Virtual Environment
