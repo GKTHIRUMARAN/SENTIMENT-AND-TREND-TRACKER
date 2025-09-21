@@ -1,7 +1,7 @@
 # Sentiment-and-Trend-Tracker
 
 ## An **end-to-end data project** that integrates **MySQL, Jupyter, Power BI, and Streamlit** to track sentiment trends in real-time using AI/ML models.  
-This project demonstrates a complete workflow — from **data ingestion, preprocessing, ML modeling, visualization, and deployment**.##
+This project demonstrates a complete workflow — from **data ingestion, preprocessing, ML modeling, visualization, and deployment**.
 ---
 
 ## 🔹 Features
