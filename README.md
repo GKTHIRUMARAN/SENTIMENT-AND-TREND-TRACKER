@@ -62,4 +62,4 @@ GK Thirumaran\
 🎓 B.Tech Artificial Intelligence and Data Science\
 🌍 Coimbatore, Tamil Nadu, India\
 💼 Aspiring Data Scientist & Analyst | AIML Developer\
-🔗 [GitHub](https://www.linkedin.com/in/thirumarangk-ai) | [Porfolio](https://maranthiru180.wixsite.com/my-site)
+🔗 [Linkedin](https://www.linkedin.com/in/thirumarangk-ai) | [Porfolio](https://maranthiru180.wixsite.com/my-site)
