@@ -22,38 +22,28 @@ This project demonstrates a complete workflow — from **data ingestion, preproc
 - Web App: Streamlit
 - Version Control: Git & GitHub
 
-🚀 Getting Started
-1️⃣ Clone the Repo
-bash
-Copy code
-git clone https://github.com/your-username/trend-tracker.git
-cd trend-tracker
-2️⃣ Setup Virtual Environment
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-pip install -r requirements.txt
-3️⃣ Setup MySQL
-Create database:
+# 🚀 Getting Started
+- 1️⃣ Clone the Repo
+- git clone https://github.com/your-username/trend-tracker.git
+- cd trend-tracker
+- 2️⃣ Setup Virtual Environment
+- python -m venv venv
+- venv\Scripts\activate      # Windows
+- pip install -r requirements.txt
+- 3️⃣ Setup MySQL
+- Create database:
 
-sql
-Copy code
-CREATE DATABASE trend_tracker;
-Run SQL script:
+- CREATE DATABASE trend_tracker;
+- Run SQL script:
 
-sql
-Copy code
-SOURCE sql/day1.sql;
-4️⃣ Train the Model
-Open the Jupyter Notebooks (notebooks/) step by step and generate model.pkl.
+- SOURCE sql/day1.sql;
+- 4️⃣ Train the Model
+- Open the Jupyter Notebooks (notebooks/) step by step and generate model.pkl.
 
-5️⃣ Run Streamlit App
-bash
-Copy code
-streamlit run app.py
-📊 Power BI Dashboard
+- 5️⃣ Run Streamlit App
+- streamlit run app.py
+
+- 📊 Power BI Dashboard
 The Power BI dashboard provides:
 
 Sentiment distribution
