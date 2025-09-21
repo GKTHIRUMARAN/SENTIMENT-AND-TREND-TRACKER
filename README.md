@@ -57,7 +57,7 @@ streamlit run app.py
 - Experiment with transformer-based models (BERT, RoBERTa).
 - Add CI/CD workflows for automated model retraining.
 
-# 👤 Author\
+# 👤 Author
 GK Thirumaran\
 🎓 B.Tech Artificial Intelligence and Data Science\
 🌍 Coimbatore, Tamil Nadu, India\
