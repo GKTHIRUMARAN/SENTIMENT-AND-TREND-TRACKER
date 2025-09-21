@@ -23,26 +23,26 @@ This project demonstrates a complete workflow — from **data ingestion, preproc
 - Version Control: Git & GitHub
 
 # 🚀 Getting Started
-# 1️⃣ Clone the Repo\
-git clone https://github.com/GKTHIRUMARAN/Sentiment-and-Trend-Tracker\
-cd trend-tracker\
+# 1️⃣ Clone the Repo
+git clone https://github.com/GKTHIRUMARAN/Sentiment-and-Trend-Tracker.git\
+cd trend-tracker
 
 # 2️⃣ Setup Virtual Environment
 python -m venv venv\
 venv\Scripts\activate      # Windows\
-pip install -r requirements.txt\
+pip install -r requirements.txt
 
 # 3️⃣ Setup MySQL
 Create database:\
 CREATE DATABASE trend_tracker;\
 Run SQL script:\
-SOURCE sql/Track_data.sql;\
+SOURCE sql/Track_data.sql;
 
 # 4️⃣ Train the Model
-Open the Jupyter Notebooks (notebooks/) step by step and generate model.pkl.\
+Open the Jupyter Notebooks (notebooks/) step by step and generate model.pkl.
 
 # 5️⃣ Run Streamlit App
-streamlit run app.py\
+streamlit run app.py
 
 # 📊 Power BI Dashboard
 - The Power BI dashboard provides:
