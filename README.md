@@ -24,12 +24,14 @@ This project demonstrates a complete workflow — from **data ingestion, preproc
 
 # 🚀 Getting Started
 # 1️⃣ Clone the Repo\
-git clone https://github.com/your-username/trend-tracker.git\
+git clone https://github.com/GKTHIRUMARAN/Sentiment-and-Trend-Tracker.git\
 cd trend-tracker\
+
 # 2️⃣ Setup Virtual Environment
 python -m venv venv\
 venv\Scripts\activate      # Windows\
 pip install -r requirements.txt\
+
 # 3️⃣ Setup MySQL
 Create database:\
 CREATE DATABASE trend_tracker;\
