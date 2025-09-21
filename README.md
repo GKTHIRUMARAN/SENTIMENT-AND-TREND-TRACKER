@@ -44,20 +44,20 @@ Open the Jupyter Notebooks (notebooks/) step by step and generate model.pkl.
 ## 5️⃣ Run Streamlit App
 streamlit run app.py
 
-# 📊 Power BI Dashboard
+## 📊 Power BI Dashboard
 - The Power BI dashboard provides:
 - Sentiment distribution
 - Land-based segmentation
 - Temporal sentiment trends
 - Dataset vs model prediction comparisons
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 - Integrate live Twitter/Reddit APIs for real-time streaming data.
 - Deploy Streamlit app on cloud platforms (Heroku, Streamlit Cloud, or GCP).
 - Experiment with transformer-based models (BERT, RoBERTa).
 - Add CI/CD workflows for automated model retraining.
 
-# 👤 Author
+## 👤 Author
 GK Thirumaran\
 🎓 B.Tech Artificial Intelligence and Data Science\
 🌍 Coimbatore, Tamil Nadu, India\
