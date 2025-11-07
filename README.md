@@ -13,7 +13,7 @@
 **SENTIMENT & TREND TRACKER** is a professional-grade **AI-driven analytics platform** that performs real-time **sentiment, emotion, and trend detection** across datasets or user inputs.  
 It represents a complete **end-to-end data science system**, integrating **ETL**, **machine learning**, **dashboard visualization**, and **traceable logging** — all within one unified architecture.
 
-This repository hosts the **Intelligent Build (v2 base)** of the system, evolved from the **V.0 prototype** that established the foundation of the ETL + ML pipeline.
+This repository hosts the **V.0 prototype** that established the foundation of the ETL + ML pipeline.
 
 ---
 
@@ -22,7 +22,7 @@ This repository hosts the **Intelligent Build (v2 base)** of the system, evolved
 | Version | Description | Key Tech |
 | :------ | :----------- | :-------- |
 | [V.0 — Prototype](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.0) | Streamlit-based sentiment analysis dashboard demonstrating ETL, ML, and visualization. | Python, Streamlit, scikit-learn |
-| V.1 / V.2 — Intelligent Build *(Planned)* | Real-time API integration with automated ingestion and trend analytics. | FastAPI, MySQL, Plotly, React *(future)* |
+| V.1 — Intelligent Build *(Planned)* | Real-time API integration with automated ingestion and trend analytics. | FastAPI, MySQL, Plotly, React *(future)* |
 
 ---
 
