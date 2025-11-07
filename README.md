@@ -1,6 +1,6 @@
 # 🧠 SENTIMENT-AND-TREND-TRACKER
 
-> **End-to-End AI-Powered Sentiment & Trend Analysis System (V.0 Prototype Build)**  
+> **End-to-End AI-Powered Sentiment & Trend Analysis System**  
 > Intelligent data pipeline integrating ETL, ML, and visualization.
 
 ![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=brightgreen&style=for-the-badge)
@@ -14,7 +14,7 @@
 **SENTIMENT-AND-TREND-TRACKER** is a portfolio-grade **AI data system** demonstrating the full cycle of **text ingestion → cleaning → model prediction → visualization**.  
 It transforms raw text data (reviews, feedback, notes) into clear, actionable **sentiment and trend insights** through a **Streamlit dashboard** powered by **Python & ML models**.
 
-This version (**V.0**) establishes the **complete working prototype**, forming the foundation for the upcoming **real-time intelligent build (V.1)**.
+Version (**V.0**) establishes the **complete working prototype**, forming the foundation for the upcoming **real-time intelligent build (V.1)**.
 
 ---
 
