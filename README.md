@@ -67,45 +67,6 @@ flowchart TD
 
 ---
 
-## 🧱 Repository Structure
-
-```
-│   .env
-│   .gitignore
-│   app.py
-│   requirements.txt
-│
-├───config/
-│   └── db_config.json
-│
-├───data/
-│   ├── raw_data.csv
-│   └── cleaned_dataset.csv
-│
-├───logs/
-│   ├── data_cleaning.log
-│   ├── ingestion.log
-│   ├── model_training.log
-│   └── model_prediction.log
-│
-├───models/
-│   └── model.pkl
-│
-├───pipeline/
-│   └── run_pipeline.py
-│
-└───scripts/
-    ├── ingestion/
-    │   └── data_ingestion.py
-    ├── preprocessing/
-    │   └── data_cleaning.py
-    └── model/
-        ├── model_training.py
-        └── model_prediction.py
-```
-
----
-
 ## 📊 Workflow Summary
 
 1. **Ingest Data** → Load raw CSVs
