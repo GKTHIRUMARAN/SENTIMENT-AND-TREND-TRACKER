@@ -10,10 +10,10 @@
 
 ## 🧭 Overview
 
-**SENTIMENT & TREND TRACKER** is a professional-grade **AI-driven analytics platform** that performs real-time **sentiment, emotion, and trend detection** across datasets or user inputs.  
-It represents a complete **end-to-end data science system**, integrating **ETL**, **machine learning**, **dashboard visualization**, and **traceable logging** — all within one unified architecture.
+**SENTIMENT & TREND TRACKER** is a professional-grade **AI-driven analytics platform** for real-time **sentiment, emotion, and trend detection** across datasets or live user input.  
+It represents a complete **end-to-end data science system**, integrating **ETL pipelines, machine learning, visualization dashboards, and traceable logging** in a single architecture.
 
-This repository hosts the **V.0 prototype** that established the foundation of the ETL + ML pipeline.
+This repository hosts the **V.0 prototype**, which lays the foundation for a full-scale **Intelligent Build (V.1)** with automated ingestion, real-time API, and expanded analytics.
 
 ---
 
@@ -29,11 +29,11 @@ This repository hosts the **V.0 prototype** that established the foundation of t
 ## 🧩 Core Features
 
 - ⚙️ **End-to-End Pipeline:** Ingestion → Preprocessing → Modeling → Prediction → Visualization  
-- 🧠 **ML-Powered Insights:** Detects sentiment and emotion from text data  
+- 🧠 **ML-Powered Insights:** Detect sentiment and emotion from text  
 - 📊 **Interactive Dashboards:** Visualize sentiment distribution and temporal trends  
 - 💾 **Structured Data Flow:** Clear raw → cleaned → processed → model stages  
-- 🧰 **Traceable Logging:** Every operation logged for reproducibility  
-- 🚀 **Modular Architecture:** Expandable into real-time and cloud-ready builds  
+- 🧰 **Traceable Logging:** All operations logged for reproducibility  
+- 🚀 **Modular Architecture:** Expandable into real-time, cloud-ready builds  
 
 ---
 
@@ -81,11 +81,11 @@ flowchart TD
 
 ## 🔍 Workflow Summary
 
-1. **Data Ingestion** — Load raw text data from CSV or manual input.
-2. **Preprocessing** — Clean, tokenize, and normalize textual data.
-3. **Model Training** — Train Logistic Regression or Naive Bayes model.
-4. **Prediction** — Generate sentiment or emotion labels.
-5. **Visualization** — Present trends, sentiment breakdowns, and summaries.
+1. **Data Ingestion** — Load raw text data from CSV or manual input
+2. **Preprocessing** — Clean, tokenize, and normalize textual data
+3. **Model Training** — Train Logistic Regression or Naive Bayes model
+4. **Prediction** — Generate sentiment or emotion labels
+5. **Visualization** — Present trends, sentiment breakdowns, and summaries
 
 ---
 
@@ -105,14 +105,14 @@ flowchart TD
 
 ## 🧠 Prototype Foundation (V.0)
 
-The **V.0 version** establishes the **complete offline ETL–ML–Visualization pipeline**, serving as the technical base for future intelligent builds.
+The **V.0 version** establishes the **complete offline ETL → ML → Visualization pipeline**, serving as the technical base for future intelligent builds.
 
 Key functionalities:
 
-* Local data ingestion and preprocessing.
-* TF-IDF vectorization and ML classification.
-* Streamlit-based visualization dashboard.
-* Logging for each operational stage.
+* Local data ingestion and preprocessing
+* TF-IDF vectorization and ML classification
+* Streamlit-based visualization dashboard
+* Logging for each operational stage
 
 📦 **Access here:** [V.0 — Prototype Build](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.0)
 
@@ -140,5 +140,3 @@ Licensed under the [MIT License](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-T
 🌍 *Coimbatore, Tamil Nadu, India*  
 💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
 🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
----
-```
