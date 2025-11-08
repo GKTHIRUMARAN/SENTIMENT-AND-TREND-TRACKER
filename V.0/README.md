@@ -1,56 +1,55 @@
 # 🧩 SENTIMENT-AND-TREND-TRACKER — V.0 Prototype Build
 
-> **End-to-End Sentiment Analysis & Trend Visualization (Streamlit + scikit-learn Prototype)**  
+> **End-to-End Sentiment Analysis & Trend Visualization (Streamlit + scikit-learn Prototype)**
 > The foundation of the *Intelligent Build — Real-Time Sentiment & Trend Tracker.*
 
-![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=brightgreen&style=for-the-badge)
-![License](https://img.shields.io/github/license/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=blue&style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=yellow&style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=brightgreen\&style=for-the-badge)
+![License](https://img.shields.io/github/license/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=blue\&style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=yellow\&style=for-the-badge)
 
 ---
 
 ## 🧠 Overview
 
-**SENTIMENT-AND-TREND-TRACKER (V.0)** marks the **first working prototype** of the full-scale *Intelligent Sentiment & Trend Tracking System.*  
-This version demonstrates the complete **end-to-end pipeline** — from **data ingestion and cleaning** to **model training, prediction, and visualization** — implemented in **Python + Streamlit**.
+**SENTIMENT-AND-TREND-TRACKER (V.0)** is the **first fully functional prototype** of the future *Intelligent Sentiment & Trend Tracking System*.
+It demonstrates a **complete end-to-end pipeline**: data ingestion → cleaning → model training → prediction → visualization, implemented entirely in **Python + Streamlit**.
 
-The prototype establishes the **technical backbone** for the upcoming intelligent build that will integrate real-time APIs, database automation, and advanced trend analytics.
+This version establishes the **technical backbone** for the next intelligent build (V.1) but operates entirely offline with sample datasets.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
-To build a **portfolio-grade, offline functional prototype** capable of:
-
-- Ingesting and cleaning textual datasets (reviews, notes, or feedback).
-- Training and deploying sentiment analysis models locally.
-- Predicting and visualizing emotion/sentiment trends interactively.
-- Logging and tracing every stage in a reproducible workflow.
+* Ingest and clean textual datasets (reviews, feedback, notes).
+* Train and deploy sentiment analysis models locally.
+* Predict and visualize sentiment and emotion trends interactively.
+* Log all steps for reproducibility and traceability.
+* Provide a **modular, extendable architecture** for future development.
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Layer | Tool / Library | Description |
-| :---- | :-------------- | :----------- |
-| **Language** | Python 3.10+ | Core scripting |
-| **Data Handling** | pandas, numpy | Data manipulation |
-| **Preprocessing** | nltk, regex | Text cleaning & tokenization |
-| **ML / NLP** | scikit-learn, joblib | Sentiment classification |
-| **Visualization** | Streamlit, matplotlib, plotly | Interactive dashboard |
-| **Logging** | Python `logging` | Stage-wise pipeline logging |
-| **Config** | dotenv, JSON | Environment and configuration setup |
+| Layer             | Tool / Library                | Description                         |
+| :---------------- | :---------------------------- | :---------------------------------- |
+| **Language**      | Python 3.10+                  | Core scripting                      |
+| **Data Handling** | pandas, numpy                 | Data manipulation                   |
+| **Preprocessing** | nltk, regex                   | Text cleaning & tokenization        |
+| **ML / NLP**      | scikit-learn, joblib          | Sentiment classification            |
+| **Visualization** | Streamlit, matplotlib, plotly | Interactive dashboard               |
+| **Logging**       | Python `logging`              | Stage-wise pipeline logging         |
+| **Config**        | dotenv, JSON                  | Environment and configuration setup |
 
 ---
 
 ## 🧩 Core Features
 
-- ⚙️ **ETL Pipeline:** Raw data → Cleaned dataset → Model-ready inputs  
-- 🧠 **Machine Learning:** TF-IDF vectorization + Logistic Regression  
-- 💾 **Persistent Artifacts:** Saves processed data and trained model (`model.pkl`)  
-- 📊 **Interactive Dashboard:** Streamlit interface for real-time insight display  
-- 🧰 **Traceability:** Logs every operation across ingestion, cleaning, and modeling  
-- 🚀 **Modular Design:** Each component runs independently for testing or extension  
+* ⚙️ **ETL Pipeline:** Raw data → Cleaned dataset → Model-ready inputs
+* 🧠 **Machine Learning:** TF-IDF vectorization + Logistic Regression
+* 💾 **Persistent Artifacts:** Saves processed data and trained model (`model.pkl`)
+* 📊 **Interactive Dashboard:** Streamlit interface for real-time insights
+* 🧰 **Traceability:** Logs every operation across ingestion, cleaning, and modeling
+* 🚀 **Modular Design:** Components can run independently for testing or extension
 
 ---
 
@@ -64,7 +63,7 @@ flowchart LR
     D --> E[Prediction & Labeling]
     E --> F[Streamlit Dashboard]
     F -->|Visual Output| G[Sentiment & Trend Insights]
-````
+```
 
 ---
 
@@ -110,42 +109,32 @@ flowchart LR
 ## 💡 Workflow Steps
 
 1. **Data Ingestion**
-
-   * Loads raw CSV dataset into `/data/raw_data.csv`.
-   * Logs ingestion steps and dataset info.
+   Loads raw CSV datasets into `/data/raw_data.csv` and logs ingestion.
 
 2. **Preprocessing**
-
-   * Cleans text (stopwords, punctuation, case normalization).
-   * Outputs `/data/cleaned_dataset.csv`.
+   Cleans text (stopwords, punctuation, normalization) → outputs `/data/cleaned_dataset.csv`.
 
 3. **Model Training**
-
-   * Uses TF-IDF + Logistic Regression for classification.
-   * Saves model to `/models/model.pkl`.
+   TF-IDF vectorization + Logistic Regression → serialized to `/models/model.pkl`.
 
 4. **Prediction & Evaluation**
+   Generates predictions using trained model → logs metrics in `/logs/model_prediction.log`.
 
-   * Runs predictions using the trained model.
-   * Logs accuracy metrics in `/logs/model_prediction.log`.
-
-5. **Visualization (Streamlit Dashboard)**
-
-   * Displays sentiment breakdown, trend charts, and data filters.
-   * Offers CSV upload and analysis refresh options.
+5. **Visualization**
+   `app.py` runs Streamlit dashboard → shows sentiment breakdown, trend charts, CSV upload, and refresh options.
 
 ---
 
 ## 🧰 Key Scripts
 
-| File                  | Role                                                         |
-| :-------------------- | :----------------------------------------------------------- |
-| `app.py`              | Streamlit dashboard; connects data, model, and visualization |
-| `data_ingestion.py`   | Loads and saves raw datasets                                 |
-| `data_cleaning.py`    | Prepares and cleans text data                                |
-| `model_training.py`   | Trains and serializes sentiment model                        |
-| `model_prediction.py` | Generates predictions and logs output                        |
-| `run_pipeline.py`     | Automates ingestion → preprocessing → training sequence      |
+| File                  | Role                                                          |
+| :-------------------- | :------------------------------------------------------------ |
+| `app.py`              | Streamlit dashboard connecting data, model, and visualization |
+| `data_ingestion.py`   | Loads and saves raw datasets                                  |
+| `data_cleaning.py`    | Prepares and cleans text data                                 |
+| `model_training.py`   | Trains and serializes sentiment model                         |
+| `model_prediction.py` | Generates predictions and logs output                         |
+| `run_pipeline.py`     | Automates ingestion → preprocessing → training sequence       |
 
 ---
 
@@ -176,77 +165,74 @@ if uploaded_file:
 
 ## 📊 Dashboard Output Example
 
-> **Sentiment Breakdown (Sample):**
->
-> * Positive: 61%
-> * Neutral: 27%
-> * Negative: 12%
-
 <p align="center">
   <img src="https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/blob/main/V.0/demo/Screenshot%202025-09-21%20084602.png" alt="Sentiment & Trend Tracker Dashboard" width="800">
 </p>
 
 ---
 
-## 🧠 Internal Logic
+## ⚙️ Environment Setup
 
-1. **Initialize pipeline:** Run `run_pipeline.py` for end-to-end execution.
-2. **Load configuration:** `.env` and `db_config.json` for environment setup.
-3. **Run Streamlit dashboard:** Launch `app.py` for visualization and interaction.
-4. **Monitor logs:** Review `/logs` for traceable workflow stages.
-5. **Model reuse:** Use `model.pkl` for retraining or API integration in future builds.
+1. **Create virtual environment & activate:**
 
----
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
 
-## 🚀 Future Goals (Towards V.1)
+2. **Install dependencies:**
 
-| Feature        | Upgrade Path                                                  |
-| :------------- | :------------------------------------------------------------ |
-| **Backend**    | Integrate FastAPI for real-time analysis                      |
-| **Database**   | Add MySQL for persistent trend data                           |
-| **Frontend**   | React-based rich visualization layer                          |
-| **Retrieval**  | Introduce RAG or semantic search for insights                 |
-| **Automation** | Streamline ingestion and scheduling via pipeline orchestrator |
+```bash
+pip install -r requirements.txt
+```
+
+3. **Environment variables:**
+   Create `.env` with:
+
+```
+DB_HOST=
+DB_USER=
+DB_PASSWORD=
+API_KEY=
+```
+
+4. **Run end-to-end pipeline (optional):**
+
+```bash
+python pipeline/run_pipeline.py
+```
+
+5. **Launch Streamlit Dashboard:**
+
+```bash
+streamlit run app.py
+```
 
 ---
 
 ## ✅ Outcome
 
-The **V.0 prototype** validates a fully operational, modular data science workflow — combining:
+The **V.0 prototype** provides:
 
-* Data engineering (ETL)
-* NLP preprocessing and sentiment modeling
-* Visual analytics via Streamlit
-* Structured, logged, and reproducible workflow
-
-This version serves as the **foundation** for the *Intelligent Build (V.1)* — where real-time data, APIs, and dynamic dashboards will be introduced.
+* Offline sentiment analysis & trend visualization
+* Modular and reproducible ETL + ML pipeline
+* Fully functional Streamlit dashboard
+* Foundation for the Intelligent Build (V.1)
 
 ---
 
 ## 🔗 Project Links
 
-| Resource               | Link                                                                                                |
-| :--------------------- | :-------------------------------------------------------------------------------------------------- |
-| 🏠 **Main Repository** | [SENTIMENT-AND-TREND-TRACKER](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER)          |
-| ⚡ **License**          | [MIT License](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/blob/main/LICENSE)        |
-
----
-
-## 🧩 How It Fits in the Whole Project
-
-This **V.0 module** is the **foundation layer** of the full system — establishing data flow, model logic, and visualization design.
-It feeds directly into the **Intelligent Build (V.1)**, where automation, APIs, and live trend analysis will evolve.
-
-> 🪴 Think of this version as the seed — everything after it grows from here.
-
-[⬅ Back to Main README](../README.md)
+| Resource               | Link                                                                                         |
+| :--------------------- | :------------------------------------------------------------------------------------------- |
+| 🏠 **Main Repository** | [SENTIMENT-AND-TREND-TRACKER](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER)   |
+| ⚡ **License**          | [MIT License](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/blob/main/LICENSE) |
 
 ---
 
 ## 👤 Author
-
 **GK Thirumaran**  
-🎓 *B.Tech — Artificial Intelligence & Data Science*  
-🌍 *Coimbatore, India*  
-💼 *Full-Stack AI Developer | Data Scientist | System Architect*  
-🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
+🎓 *B.Tech Artificial Intelligence and Data Science*  
+🌍 *Coimbatore, Tamil Nadu, India*  
+💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
+🔗 [Linkedin](https://www.linkedin.com/in/thirumarangk-ai) | [Porfolio](https://maranthiru180.wixsite.com/my-site)
