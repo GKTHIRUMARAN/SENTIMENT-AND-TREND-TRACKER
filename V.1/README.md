@@ -48,11 +48,11 @@ flowchart TD
     B -->|POST /api/analyze| C[FastAPI Backend]
     C -->|Ingest| D[Ingestion Module]
     D -->|Clean| E[Preprocessing Layer]
-    E -->|Run Models| F[ML Models<br/>(Sentiment, Emotion, BERTopic, Prophet)]
-    F -->|Save Results| G[Results Storage<br/>(CSV / DB)]
+    E -->|Run Models| F["ML Models\n(Sentiment, Emotion, BERTopic, Prophet)"]
+    F -->|Save Results| G["Results Storage\n(CSV / DB)"]
     G -->|Serve Data| H[Visualization API]
     H -->|Chart JSON| B
-    F -->|Store Summary| I[Memory System<br/>(JSON + VectorDB)]
+    F -->|Store Summary| I["Memory System\n(JSON + VectorDB)"]
     D -->|Triggered Run| J[ETL Automation Engine]
 ```
 
@@ -299,4 +299,5 @@ It transforms an idea into a **production-ready multi-model analytics engine**, 
 🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
 
 ---
+
 
