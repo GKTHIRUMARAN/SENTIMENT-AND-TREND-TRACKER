@@ -1,0 +1,84 @@
+# ============================================
+# 🚀 CORE BACKEND FRAMEWORKS
+# ============================================
+fastapi==0.115.0
+uvicorn[standard]==0.30.3
+pydantic==2.9.2
+python-dotenv==1.0.1
+requests==2.32.3
+
+# ============================================
+# 🧮 DATA HANDLING & ETL
+# ============================================
+pandas==2.2.3
+numpy==1.26.4
+tqdm==4.66.4
+sqlalchemy==2.0.36
+pymysql==1.1.1
+openpyxl==3.1.5
+python-dateutil==2.9.0
+schedule==1.2.1
+
+# ============================================
+# 🤖 MACHINE LEARNING / NLP
+# ============================================
+scikit-learn==1.5.2
+transformers==4.45.2
+torch==2.4.1
+sentencepiece==0.2.0
+textblob==0.18.0
+vaderSentiment==3.3.2
+bertopic==0.16.0
+
+# ============================================
+# 🔮 TREND FORECASTING & ANALYTICS
+# ============================================
+prophet==1.1.6
+matplotlib==3.9.2
+plotly==5.24.1
+seaborn==0.13.2
+wordcloud==1.9.3
+
+# ============================================
+# 🧠 MEMORY / VECTOR DATABASES
+# ============================================
+faiss-cpu==1.9.0
+chromadb==0.5.12
+langchain==0.3.5
+langchain-community==0.3.3
+
+# ============================================
+# 📊 FRONTEND INTERFACE (REACT BUILD TOOLS)
+# ============================================
+# These are Node dependencies required when building the React app
+# Run `npm install` in frontend/react_app/ after creating package.json
+# (Versions are noted here for reference)
+# --------------------------------------------
+# react==18.2.0
+# react-dom==18.2.0
+# react-scripts==5.0.1
+# axios==1.7.4
+# recharts==2.10.3
+# tailwindcss==3.4.13
+# framer-motion==11.3.16
+# shadcn-ui==1.0.0
+
+# ============================================
+# 🧩 UTILITIES & LOGGING
+# ============================================
+loguru==0.7.2
+colorlog==6.8.2
+joblib==1.4.2
+nltk==3.9.1
+
+# ============================================
+# 🧱 TESTING & VALIDATION
+# ============================================
+pytest==8.3.3
+httpx==0.27.2
+
+# ============================================
+# ☁️ DEPLOYMENT / SERVER
+# ============================================
+gunicorn==23.0.0
+docker==7.1.0
