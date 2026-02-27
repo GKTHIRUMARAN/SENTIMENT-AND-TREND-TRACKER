@@ -1,303 +1,240 @@
-# ⚡ **SENTIMENT-AND-TREND-TRACKER — V.1 Full Build**
+# Sentiment & Trend Tracker — V1 Full Implementation
 
-> **AI-Powered Real-Time Sentiment, Emotion & Trend Forecasting System (FastAPI + React + ML Models)**
-> The evolution of the *Trend Tracker Prototype (V.0)* into a **full-scale analytics engine** with automated ETL, forecasting, memory, and a complete frontend dashboard.
-
-![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=brightgreen\&style=for-the-badge)
-![License](https://img.shields.io/github/license/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=blue\&style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER?color=yellow\&style=for-the-badge)
+> Modular NLP analytics system with sentiment classification, topic modeling, forecasting, and API-driven dashboard using FastAPI and React.
 
 ---
 
-## 🧠 Overview
+## Overview
 
-**Trend Tracker (V.1)** is the **first complete production-ready version** of an AI-powered text analytics platform capable of transforming raw text into **sentiment**, **emotion**, **topics**, and **trend forecasts**.
-Powered by **FastAPI**, **React**, **BERTopic**, **VADER**, **DistilRoBERTa**, and **Prophet**, this full-stack system delivers:
+V1 expands the V0 prototype into a structured full-stack implementation.
 
-* **Real-time & manual ingestion (CSV/API)**
-* **Automated ETL → preprocessing → ML analysis**
-* **Sentiment & emotion classification**
-* **Topic extraction + forecasting**
-* **Memory system for historical summaries**
-* **Dashboard UI with charts & KPIs**
-* **Persistent logs, vector DB, and model storage**
+This version integrates:
 
-This version expands the lightweight [V.0](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.0) prototype into a **fully functional AI analytics engine**.
+- FastAPI backend for ingestion and analysis
+- Automated ETL pipeline
+- Sentiment and emotion classification
+- Topic modeling
+- Trend forecasting
+- Persistent storage and logging
+- React-based dashboard
 
----
-
-## 🎯 Core Vision
-
-Build a **scalable, modular, data-driven analytics framework** that can:
-
-* Ingest text from any source (manual, CSV, API)
-* Clean, preprocess, and normalize text automatically
-* Perform **sentiment**, **emotion**, and **topic modeling**
-* Generate **forecasted trend curves**
-* Store **history + embeddings** for semantic recall
-* Provide a **modern, interactive React dashboard**
-* Enable seamless upgrades to real-time social data in **V.2**
+The system is designed with modular separation between ingestion, preprocessing, model execution, and visualization layers.
 
 ---
 
-## ⚙️ System Architecture
+## Architectural Objectives
 
-```mermaid
-flowchart TD
-    A[User] -->|Input Text / CSV| B[React Dashboard]
-    B -->|POST /api/analyze| C[FastAPI Backend]
-    C -->|Ingest| D[Ingestion Module]
-    D -->|Clean| E[Preprocessing Layer]
-    E -->|Run Models| F["ML Models\n(Sentiment, Emotion, BERTopic, Prophet)"]
-    F -->|Save Results| G["Results Storage\n(CSV / DB)"]
-    G -->|Serve Data| H[Visualization API]
-    H -->|Chart JSON| B
-    F -->|Store Summary| I["Memory System\n(JSON + VectorDB)"]
-    D -->|Triggered Run| J[ETL Automation Engine]
-```
+1. Replace prototype-bound execution with API-based orchestration.
+2. Support both manual and CSV ingestion.
+3. Integrate multiple NLP models in a unified pipeline.
+4. Store analysis results and historical summaries.
+5. Serve visualization-ready JSON to frontend.
+6. Prepare for real-time ingestion in future versions.
 
 ---
 
-## 🧩 Key Components
+## High-Level Architecture
 
-| Layer               | Technology       | Role                                               |
-| :------------------ | :--------------- | :------------------------------------------------- |
-| **Frontend**        | React            | Dashboard UI, charts, KPI cards                    |
-| **Backend**         | FastAPI          | Ingestion, analysis pipeline, visualization routes |
-| **Sentiment Model** | VADER            | Polarity scoring                                   |
-| **Emotion Model**   | DistilRoBERTa    | Emotion classification (anger, joy, sadness, etc.) |
-| **Topic Modeling**  | BERTopic         | Topic clusters + keywords                          |
-| **Forecasting**     | Prophet          | 7-day textual trend prediction                     |
-| **Memory Layer**    | JSON + VectorDB  | Query history + semantic recall                    |
-| **Logs**            | Logging Module   | Tracks ETL, API errors, analysis steps             |
-| **Database**        | SQLAlchemy + SQL | Result storage + optional DB integration           |
+User Input (Text / CSV)  
+→ React Dashboard  
+→ FastAPI Backend  
+→ Ingestion Module  
+→ Preprocessing Layer  
+→ Model Execution Layer  
+→ Results Storage  
+→ Visualization API  
+→ Frontend Rendering  
 
----
-
-## 🧱 Folder Structure
-
-```
-V.1/
-│
-├── backend/
-│   ├── api/
-│   │   ├── main.py
-│   │   ├── routes/
-│   │   │   ├── ingest.py
-│   │   │   ├── analyze.py
-│   │   │   ├── memory.py
-│   │   │   ├── visualize.py
-│   │   ├── utils/
-│   │   │   ├── preprocess.py
-│   │   │   ├── sentiment.py
-│   │   │   ├── emotion.py
-│   │   │   ├── trend.py
-│   │   ├── db/
-│   │   │   ├── connector.py
-│   │   │   └── queries.sql
-│   ├── pipeline/
-│   │   └── etl_automation.py
-│   └── .env
-│
-├── frontend/
-│   └── react_app/
-│
-├── data/
-│   ├── raw/
-│   ├── cleaned/
-│   └── results/
-│
-├── models/
-│   ├── sentiment_model.pkl
-│   ├── emotion_model.pkl
-│   └── trend_model.pkl
-│
-├── memory/
-│   ├── memory_store.json
-│   └── vector_db/
-│
-└── logs/
-    ├── etl.log
-    ├── analysis.log
-    └── api.log
-```
+Memory and embedding storage are handled independently of the analysis pipeline.
 
 ---
 
-## 📸 Demo Snapshot
+## Backend Structure
 
-<p align="center">
-  <img src="https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/blob/main/V.1/Demo/demo%20(1).png" alt="Trend Tracker Dashboard Demo" width="850">
-</p>
+backend/ ├── api/ │   ├── main.py │   ├── routes/ │   ├── utils/ │   ├── db/ ├── pipeline/ └── .env
 
-🔗 **More demo screenshots:**
-[https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.1/Demo](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.1/Demo)
+Responsibilities:
 
----
-
-## ⚡ Backend — FastAPI Core
-
-The backend is the **engine** powering ingestion, preprocessing, model execution, memory management, and visualization APIs.
-
-### 🔧 Main Components
-
-| File / Module       | Description                                            |
-| :------------------ | :----------------------------------------------------- |
-| `main.py`           | Initializes FastAPI and mounts all route modules       |
-| `ingest.py`         | CSV/API ingestion → stored in `data/raw/`              |
-| `preprocess.py`     | Text cleaning, normalization, stopwords, lemmatization |
-| `sentiment.py`      | VADER sentiment classifier                             |
-| `emotion.py`        | DistilRoBERTa-based emotion prediction                 |
-| `trend.py`          | BERTopic → Prophet forecasting engine                  |
-| `analyze.py`        | Full ML pipeline, saves `results.csv`                  |
-| `memory.py`         | Manages memory store and embedding vector DB           |
-| `visualize.py`      | Chart-ready JSON for dashboard                         |
-| `etl_automation.py` | Complete automated ingestion → analysis cycle          |
-
-### ✅ Backend Highlights
-
-* Fully modular API architecture
-* ML pipeline integrated end-to-end
-* Persistent memory system
-* Visualization-ready response formatting
-* Logging for ETL, API, and model execution
-* DB-ready structure with SQLAlchemy
+- Dataset ingestion
+- Text preprocessing
+- Model orchestration
+- Forecast computation
+- Memory storage
+- Visualization formatting
+- Logging
 
 ---
 
-## 💻 Frontend — React Dashboard
+## Model Layer
 
-A clean, analytics-focused interface for interacting with the backend.
+### Sentiment
+- VADER polarity scoring
 
-### ✨ UI Features
+### Emotion
+- DistilRoBERTa-based classification
 
-* Input text page
-* KPI cards for sentiment & emotion
-* Charts for emotion, sentiment, topics
-* BERTopic clusters
-* Prophet-based forecast graph
-* History view (memory system)
-* Responsive and modern layout
+### Topic Modeling
+- BERTopic clustering
 
-### 🧩 Directory Snapshot
+### Forecasting
+- Prophet for short-term trend projection
 
-```
-frontend/
-└── react_app/
-    ├── src/
-    ├── public/
-    └── package.json
-```
+Each model runs independently and outputs structured intermediate results before aggregation.
 
 ---
 
-## 🧰 Environment Setup
+## Data Flow
 
-### **.env (Backend)**
+1. Ingest raw input.
+2. Normalize and preprocess text.
+3. Execute sentiment and emotion models.
+4. Generate topic clusters.
+5. Forecast trends based on aggregated time-series.
+6. Persist results.
+7. Return structured JSON for dashboard rendering.
 
-```bash
-DB_URL=
-API_KEYS=
-MODEL_PATHS=
-```
+---
 
-### **Backend Run**
+## Storage Components
+
+- Raw input files
+- Cleaned datasets
+- Results CSV
+- Serialized model artifacts
+- Memory JSON store
+- Vector embedding storage
+- Log files for ETL and API events
+
+Database integration via SQLAlchemy is supported but optional.
+
+---
+
+## Frontend Responsibilities
+
+Built using React.
+
+- Submit text or dataset
+- Render KPIs
+- Display sentiment distribution
+- Display topic clusters
+- Render forecast charts
+- Access memory history
+
+Frontend contains no business logic; all analytics remain backend-controlled.
+
+---
+
+## Core Endpoints
+
+POST `/api/ingest`
+- Accepts text or CSV input
+
+POST `/api/analyze`
+- Executes full NLP pipeline
+
+GET `/api/visualize`
+- Returns chart-ready JSON
+
+GET `/api/memory`
+- Retrieves historical summaries
+
+---
+
+## Engineering Improvements Over V0
+
+- Offline script → API-based orchestration
+- Single model → Multi-model integration
+- No persistence → Structured storage
+- Static dashboard → Reactive frontend
+- Manual execution → Automated ETL cycle
+- No memory → Historical summary + embeddings
+
+---
+
+## Current Capabilities
+
+- Multi-model NLP analysis
+- Topic clustering
+- Time-series forecasting
+- Automated ETL execution
+- Persistent storage
+- Memory tracking
+- React dashboard integration
+- Logging across pipeline
+
+---
+
+## Known Limitations
+
+- No streaming ingestion
+- Limited evaluation metrics exposed
+- No distributed processing
+- No containerized deployment in this version
+- Forecast accuracy dependent on dataset quality
+- GPU acceleration not implemented
+
+---
+
+## Local Execution
+
+Backend:
 
 ```bash
 uvicorn backend.api.main:app --reload
-```
 
-### **Frontend Run**
+Frontend:
 
-```bash
 cd frontend/react_app
 npm install
 npm run dev
-```
 
-### **Access in Browser**
+Access:
 
-```
 http://localhost:5173
-```
+
 
 ---
 
-## ✅ Current Capabilities
+Evolution Path
 
-| Feature                   | Status        |
-| :------------------------ | :------------ |
-| Sentiment Analysis        | ✅ Complete    |
-| Emotion Detection         | ✅ Complete    |
-| Topic Modeling (BERTopic) | ✅ Complete    |
-| Forecasting (Prophet)     | ✅ Working     |
-| Automated ETL             | ✅ Functional  |
-| Memory System             | ✅ Active      |
-| FastAPI Backend           | ✅ Stable      |
-| React Dashboard           | ✅ Live        |
-| Logging System            | ✅ Enabled     |
-| Vector DB Support         | ✅ Implemented |
+Version	Scope
+
+V0	Offline NLP prototype
+V1	Modular API-based multi-model analytics
+V2 (Planned)	Real-time ingestion + distributed scaling
+
+
 
 ---
 
-## 🔮 Future Roadmap
+Role in Overall Portfolio
 
-| Goal                    | Description                                   |
-| :---------------------- | :-------------------------------------------- |
-| **Real-time API feeds** | Twitter/X, YouTube, Reddit integration        |
-| **GPU acceleration**    | Faster ML inference                           |
-| **RAG-based insights**  | Knowledge retrieval for contextual analysis   |
-| **UI upgrades**         | More charts, animations, dark mode            |
-| **Dockerization**       | Containerized deployment                      |
-| **Cloud hosting**       | Backend → Render / Railway; Frontend → Vercel |
+This project demonstrates:
+
+NLP pipeline integration
+
+Multi-model orchestration
+
+API-first architecture
+
+Frontend-backend separation
+
+Forecasting integration
+
+Memory and embedding handling
+
+
+It represents the analytics counterpart to the conversational AI and HR analytics systems.
+
 
 ---
 
-## 🧠 Lessons Learned
+Developer
 
-* BERTopic + Prophet gives lightweight yet powerful forecasting
-* Logs dramatically improve debugging and pipeline monitoring
-* Memory system increases user context awareness
-* Modular code structure allows fast scaling to V.2
-* React + FastAPI is ideal for dashboard-style ML apps
-
----
-
-## 📜 Project Links
-
-| Resource               | Link                                                                                                                                                           |
-| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 🏠 **Main Repository** | [https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER)                                     |
-| 📂 **V.0 Folder**      | [https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.0](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.0)         |
-| ⚡ **V.1 Folder**       | [https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.1](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/tree/main/V.1)         |
-| 📜 **License**         | [https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/blob/main/LICENSE](https://github.com/GKTHIRUMARAN/SENTIMENT-AND-TREND-TRACKER/blob/main/LICENSE) |
+Thirumaran GK
+AI Systems & Analytics Engineer
+Coimbatore, Tamil Nadu, India
+LinkedIn: https://linkedin.com/in/thirumarangk-ai
+GitHub: https://github.com/GKTHIRUMARAN
 
 ---
-
-## 🧩 How It Fits in the Whole Project
-
-**V.1** is the **first fully implemented version** of the Trend Tracker system, evolving from the foundational prototype of [V.0](../V.0/README.md).
-It transforms an idea into a **production-ready multi-model analytics engine**, serving as the base for:
-
-* Real-time social media tracking
-* Multi-source data aggregation
-* Live forecasting and alerting
-* Full RAG + Vector DB integrations in V.2
-
-> 🌱 The foundation is complete — V.2 will bring real-time intelligence.
-
-[⬅ Back to Main README](../README.md)
-
----
-
-## 👤 Author
-
-**GK Thirumaran**  
-🎓 *B.Tech Artificial Intelligence and Data Science*  
-🌍 *Coimbatore, Tamil Nadu, India*  
-💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
-🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
-
----
-
-
