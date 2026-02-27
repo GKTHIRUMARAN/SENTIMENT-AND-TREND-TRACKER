@@ -195,7 +195,7 @@ http://localhost:5173
 
 ---
 
-Evolution Path
+## Evolution Path
 
 Version	Scope
 
@@ -236,5 +236,3 @@ AI Systems & Analytics Engineer
 Coimbatore, Tamil Nadu, India
 LinkedIn: https://linkedin.com/in/thirumarangk-ai
 GitHub: https://github.com/GKTHIRUMARAN
-
----
