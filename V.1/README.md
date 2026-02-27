@@ -181,9 +181,9 @@ Backend:
 
 ```bash
 uvicorn backend.api.main:app --reload
-'''
+```bash
 Frontend:
-'''
+```bash
 cd frontend/react_app
 npm install
 npm run dev
@@ -191,7 +191,7 @@ npm run dev
 Access:
 
 http://localhost:5173
-'''
+```bash
 
 ---
 
@@ -206,8 +206,6 @@ V2 (Planned)	Real-time ingestion + distributed scaling
 
 
 ---
-
-Role in Overall Portfolio
 
 This project demonstrates:
 
