@@ -181,7 +181,7 @@ Backend:
 
 ```bash
 uvicorn backend.api.main:app --reload
-```bash
+```
 Frontend:
 ```bash
 cd frontend/react_app
@@ -191,7 +191,7 @@ npm run dev
 Access:
 
 http://localhost:5173
-```bash
+```
 
 ---
 
