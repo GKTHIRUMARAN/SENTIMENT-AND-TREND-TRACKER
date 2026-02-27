@@ -187,11 +187,10 @@ Frontend:
 cd frontend/react_app
 npm install
 npm run dev
-
+```
 Access:
 
 http://localhost:5173
-```
 
 ---
 
