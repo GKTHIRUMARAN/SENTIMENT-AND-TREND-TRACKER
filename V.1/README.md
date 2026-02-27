@@ -190,18 +190,6 @@ http://localhost:5173
 
 ---
 
-## Evolution Path
-
-Version	Scope
-
-V0	Offline NLP prototype
-V1	Modular API-based multi-model analytics
-V2 (Planned)	Real-time ingestion + distributed scaling
-
-
-
----
-
 This project demonstrates:
 
 NLP pipeline integration
