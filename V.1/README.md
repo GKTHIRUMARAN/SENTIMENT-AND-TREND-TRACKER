@@ -49,18 +49,7 @@ Memory and embedding storage are handled independently of the analysis pipeline.
 
 ---
 
-## Backend Structure
-
-backend/  
-├── api/  
-│   ├── main.py  
-│   ├── routes/  
-│   ├── utils/  
-│   ├── db/  
-├── pipeline/  
-└── .env  
-
-Responsibilities:
+## Backend Responsibilities
 
 - Dataset ingestion
 - Text preprocessing
